@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Abastecimento</title>
+</head>
+<body>
+
+  <h2>Abastecimento</h2>
+
+  <label>Data e Hora:</label><br>
+  <input type="datetime-local" id="dataHora"><br><br>
+
+  <label>Placa do Veículo:</label><br>
+  <input type="text" id="placa" placeholder="ABC-1234"><br><br>
+
+  <label>Tipo do Combustível:</label><br>
+  <select id="combustivel">
+    <option value="Gasolina">Gasolina</option>
+    <option value="Etanol">Etanol</option>
+    <option value="Diesel">Diesel</option>
+    <option value="GNV">GNV</option>
+  </select><br><br>
+
+  <label>Valor do Litro (R$):</label><br>
+  <input type="number" id="valorLitro" step="0.01" oninput="calcular()"><br><br>
+
+  <label>Quantidade de Litros:</label><br>
+  <input type="number" id="qtdLitros" step="0.01" oninput="calcular()"><br><br>
+
+  <p>Valor Total a Pagar: <strong id="valorTotal">R$ 0.00</strong></p>
+  <p>Valor do Imposto (25%): <strong id="valorImposto">R$ 0.00</strong></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
