@@ -2,34 +2,56 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Abastecimento</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Abastecimento</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h2>Abastecimento</h2>
+  <div class="card">
+    <h2>Abastecimento</h2>
 
-  <label>Data e Hora:</label><br>
-  <input type="datetime-local" id="dataHora"><br><br>
+    <div class="field">
+      <label for="dataHora">Data e Hora</label>
+      <input type="datetime-local" id="dataHora">
+    </div>
 
-  <label>Placa do Veículo:</label><br>
-  <input type="text" id="placa" placeholder="ABC-1234"><br><br>
+    <div class="field">
+      <label for="placa">Placa do Veículo</label>
+      <input type="text" id="placa" placeholder="ABC-1234">
+    </div>
 
-  <label>Tipo do Combustível:</label><br>
-  <select id="combustivel">
-    <option value="Gasolina">Gasolina</option>
-    <option value="Etanol">Etanol</option>
-    <option value="Diesel">Diesel</option>
-    <option value="GNV">GNV</option>
-  </select><br><br>
+    <div class="field">
+      <label for="combustivel">Tipo do Combustível</label>
+      <select id="combustivel">
+        <option value="Gasolina">Gasolina</option>
+        <option value="Etanol">Etanol</option>
+        <option value="Diesel">Diesel</option>
+        <option value="GNV">GNV</option>
+      </select>
+    </div>
 
-  <label>Valor do Litro (R$):</label><br>
-  <input type="number" id="valorLitro" step="0.01" oninput="calcular()"><br><br>
+    <div class="field">
+      <label for="valorLitro">Valor do Litro (R$)</label>
+      <input type="number" id="valorLitro" step="0.01" placeholder="0,00" oninput="calcular()">
+    </div>
 
-  <label>Quantidade de Litros:</label><br>
-  <input type="number" id="qtdLitros" step="0.01" oninput="calcular()"><br><br>
+    <div class="field">
+      <label for="qtdLitros">Quantidade de Litros</label>
+      <input type="number" id="qtdLitros" step="0.01" placeholder="0,00" oninput="calcular()">
+    </div>
 
-  <p>Valor Total a Pagar: <strong id="valorTotal">R$ 0.00</strong></p>
-  <p>Valor do Imposto (25%): <strong id="valorImposto">R$ 0.00</strong></p>
+    <div class="resultado">
+      <div class="res-item">
+        <span>Valor Total a Pagar</span>
+        <strong id="valorTotal">R$ 0,00</strong>
+      </div>
+      <div class="res-item imposto">
+        <span>Valor do Imposto (25%)</span>
+        <strong id="valorImposto">R$ 0,00</strong>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
